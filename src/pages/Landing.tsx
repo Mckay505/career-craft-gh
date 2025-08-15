@@ -23,8 +23,10 @@ const Landing = () => {
             <a href="#success" className="text-foreground hover:text-primary transition-smooth">Success Stories</a>
           </div>
           <div className="flex space-x-4">
-            <Button variant="ghost" size="sm">Sign In</Button>
-            <Link to="/profile">
+            <Link to="/auth">
+              <Button variant="ghost" size="sm">Sign In</Button>
+            </Link>
+            <Link to="/auth">
               <Button variant="hero" size="sm">Get Started</Button>
             </Link>
           </div>
@@ -50,14 +52,16 @@ const Landing = () => {
             professionally crafted CVs and resumes that get results.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
-            <Link to="/profile">
+            <Link to="/auth">
               <Button variant="premium" size="xl">
                 Create Your CV Now
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-              Watch Demo
-            </Button>
+            <Link to="/payment">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                Make Payment
+              </Button>
+            </Link>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-scale-in">
             <div className="text-center">
@@ -295,14 +299,16 @@ const Landing = () => {
               Your dream job is just one professional CV away.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link to="/profile">
+              <Link to="/auth">
                 <Button variant="premium" size="xl" className="bg-white text-primary hover:bg-gray-100">
                   Start Your Journey
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-                Learn More
-              </Button>
+              <Link to="/payment">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                  Make Payment
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
